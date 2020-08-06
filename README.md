@@ -16,7 +16,10 @@ We’d be using the MovieLens data from GroupLens Research.
 
 ## Steps
 1. Log into the AWS console and select Amazon SageMaker from the services to be redirected to the SageMaker Dashboard.
-2. Select Amazon SageMaker Studio from the navigation bar on the left and select quick start to start a new instance of Amazon SageMaker Studio. Consider leaving the default name as is, select “Create a new role” in execution role and specify the S3 buckets you’d be using (Leaving these defaults should be okay as well) and click “Create Role”. Once the execution role has been created, click on “Submit” - this will create a new Amazon SageMaker instance.
+2. Create SageMaker instance by
+    * Select Amazon SageMaker Studio from the navigation bar on the left
+    * Select quick start to start a new instance of Amazon SageMaker Studio. 
+    * Consider leaving the default name as is, select “Create a new role” in execution role and specify the S3 buckets you’d be using (Leaving these defaults should be okay as well) and click “Create Role”. Once the execution role has been created, click on “Submit” - this will create a new Amazon SageMaker instance.
 3. Once the Amazon SageMaker Studio instance is created, click on Open Studio link to launch the Amazon SageMaker Studio IDE.
 4. Create a new Jupyter notebook using the Data Science as the Kernel and the latest python (Python 3) notebook.
 5. Import the python libraries we’d be using in this task. After writing the following code in the Jupyter notebook cell, look for a play button in the controls bar on top - click it should run the currently active cell and execute its code. Here is what each imported library does:    
@@ -369,11 +372,8 @@ print(“remaining distance percentage: ”+str(remaining_percent))
 17. The results show that our model was 100% accurate for 11.4% predictions, had a deviation of 1 for 47.64% predictions, deviation of 2 for 13.51% predictions and deviation of > 2 for the remaining 27.24%
 
 **zero distance percentage:** 11.403445800430726
-
 **one distance percentage:** 47.641780330222545
-
 **two distance percentage:** 13.513998564249821
-
 **remaining distance percentage:** 27.243359655419958
 
 18. Now terminate the sagemaker instance and free the allocated resources.
@@ -382,3 +382,5 @@ sagemaker.Session().delete_endpoint(xgb_predictor.endpoint)
 bucket_to_delete = boto3.resource('s3’).Bucket(bucket_name)
 bucket_to_delete.objects.all().delete()
 ```
+
+_Last Verified Time April 8, 2020_
