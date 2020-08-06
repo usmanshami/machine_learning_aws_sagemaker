@@ -371,10 +371,13 @@ print(“remaining distance percentage: ”+str(remaining_percent))
 ```
 17. The results show that our model was 100% accurate for 11.4% predictions, had a deviation of 1 for 47.64% predictions, deviation of 2 for 13.51% predictions and deviation of > 2 for the remaining 27.24%
 
-**zero distance percentage:** 11.403445800430726
-**one distance percentage:** 47.641780330222545
-**two distance percentage:** 13.513998564249821
-**remaining distance percentage:** 27.243359655419958
+**Result Distance** | **Percentage**
+------------------- | --------------
+**zero distance**| 11.403445800430726
+**one distance** |47.641780330222545
+**two distance** |13.513998564249821
+**remaining distance** |27.243359655419958
+
 
 18. Now terminate the sagemaker instance and free the allocated resources.
 ```python
