@@ -387,3 +387,4 @@ bucket_to_delete.objects.all().delete()
 ```
 
 _Last Verified Time April 8, 2020_
+_Permalink on the Blog: https://usmanshami-blog.tumblr.com/post/614858879418941440/trying-out-aws-sagemaker-studio-for-a-simple _
