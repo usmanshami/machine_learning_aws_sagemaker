@@ -19,7 +19,12 @@ We’d be using the MovieLens data from GroupLens Research.
 2. Select Amazon SageMaker Studio from the navigation bar on the left and select quick start to start a new instance of Amazon SageMaker Studio. Consider leaving the default name as is, select “Create a new role” in execution role and specify the S3 buckets you’d be using (Leaving these defaults should be okay as well) and click “Create Role”. Once the execution role has been created, click on “Submit” - this will create a new Amazon SageMaker instance.
 3. Once the Amazon SageMaker Studio instance is created, click on Open Studio link to launch the Amazon SageMaker Studio IDE.
 4. Create a new Jupyter notebook using the Data Science as the Kernel and the latest python (Python 3) notebook.
-5. Import the python libraries we’d be using in this task - boto3 is the python library which is used for making AWS requests, sagemaker is the sagemaker library and urllib.request is the library to make url requests such as HTTP GET etc to download csv files stored on S3 and elsewhere. numpy is a scientific computing python library and pandas is a python data analysis library. After writing the following code in the Jupyter notebook cell, look for a play button in the controls bar on top - click it should run the currently active cell and execute its code.    
+5. Import the python libraries we’d be using in this task. After writing the following code in the Jupyter notebook cell, look for a play button in the controls bar on top - click it should run the currently active cell and execute its code. Here is what each imported library does:    
+  * boto3 is the python library which is used for making AWS requests, 
+  * sagemaker is the sagemaker library 
+  * urllib.request is the library to make url requests such as HTTP GET etc to download csv files stored on S3 and elsewhere
+  * numpy is a scientific computing python library 
+  * pandas is a python data analysis library. 
 ```python
 import boto3, sagemaker, urllib.request
 from sagemaker import get_execution_role
