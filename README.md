@@ -20,13 +20,13 @@ We’d be using the MovieLens data from GroupLens Research.
 3. Once the Amazon SageMaker Studio instance is created, click on Open Studio link to launch the Amazon SageMaker Studio IDE.
 4. Create a new Jupyter notebook using the Data Science as the Kernel and the latest python (Python 3) notebook.
 5. Import the python libraries we’d be using in this task - boto3 is the python library which is used for making AWS requests, sagemaker is the sagemaker library and urllib.request is the library to make url requests such as HTTP GET etc to download csv files stored on S3 and elsewhere. numpy is a scientific computing python library and pandas is a python data analysis library. After writing the following code in the Jupyter notebook cell, look for a play button in the controls bar on top - click it should run the currently active cell and execute its code.    
-
+```python
 import boto3, sagemaker, urllib.request
 from sagemaker import get_execution_role
 import numpy as np                                
 import pandas as pd                              
 from sagemaker.predictor import csv_serializer 
-
+```
 6. Once the imports have been completed, lets add some standard code to create execution role, define region settings and initialize boto for the region and xgboost
 ```python
 # Define IAM role
@@ -362,9 +362,13 @@ print(“two distance percentage: ”+str(two_distance_percent))
 print(“remaining distance percentage: ”+str(remaining_percent))
 ```
 17. The results show that our model was 100% accurate for 11.4% predictions, had a deviation of 1 for 47.64% predictions, deviation of 2 for 13.51% predictions and deviation of > 2 for the remaining 27.24%
+
 **zero distance percentage:** 11.403445800430726
+
 **one distance percentage:** 47.641780330222545
+
 **two distance percentage:** 13.513998564249821
+
 **remaining distance percentage:** 27.243359655419958
 
 18. Now terminate the sagemaker instance and free the allocated resources.
